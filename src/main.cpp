@@ -13,7 +13,7 @@ int main()
 {
     Window window(800, 600, "OpenGL Tests");
 
-    auto shader = Shader("shaders/vertex.vert.glsl", "shaders/fragment.frag.glsl");
+    Shader shader("shaders/vertex.vert.glsl", "shaders/fragment.frag.glsl");
 
     float vertices[] = {
         -0.2f, -0.2f, 0.0f,
