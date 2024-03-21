@@ -9,6 +9,10 @@ find_package(glfw3 REQUIRED)
 
 file(GLOB_RECURSE PROJECT_SOURCES src/*.cpp)
 
+if(NOT EXISTS ${CMAKE_SOURCE_DIR}/vendor/glad)
+    message(FATAL_ERROR "glad not found. Download it from https://glad.dav1d.de/ and extract it to ${CMAKE_SOURCE_DIR}/vendor/glad")
+endif()
+
 add_executable(${PROJECT_NAME} ${PROJECT_SOURCES}
     vendor/glad/src/glad.c)
 
