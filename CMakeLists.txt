@@ -7,7 +7,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 find_package(glfw3 REQUIRED)
 
-add_executable(${PROJECT_NAME} main.cpp 
+file(GLOB_RECURSE PROJECT_SOURCES src/*.cpp)
+
+add_executable(${PROJECT_NAME} ${PROJECT_SOURCES}
     vendor/glad/src/glad.c)
 
 target_include_directories(${PROJECT_NAME} PRIVATE
