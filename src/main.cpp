@@ -45,9 +45,9 @@ int main()
         glClear(GL_COLOR_BUFFER_BIT);
 
         float timeValue = glfwGetTime();
-        float greenValue = (sin(timeValue) / 2.0f) + 0.5f;
+        float xValue = (sin(timeValue) / 2.0f) + 0.5f;
+        shader.set("offset", xValue);
         shader.use();
-        shader.set("ourColor", 0.0f, greenValue, 0.0f, 1.0f);
         glBindVertexArray(VAO);
         glDrawArrays(GL_TRIANGLES, 0, 3);
 

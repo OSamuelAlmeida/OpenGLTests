@@ -42,6 +42,7 @@ unsigned int Shader::load(const std::string &path, GLenum type)
         glGetShaderInfoLog(shader, 512, NULL, infoLog);
         std::cout << "ERROR::SHADER::COMPILATION_FAILED\n"
                   << infoLog << std::endl;
+        std::cout << path << std::endl;
     }
 
     return shader;
