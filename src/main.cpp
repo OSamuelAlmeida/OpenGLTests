@@ -42,7 +42,8 @@ int main()
         glClear(GL_COLOR_BUFFER_BIT);
 
         float timeValue = glfwGetTime();
-        float xValue = (sin(timeValue) / 2.0f) + 0.5f;
+        float xValue = sin(timeValue);
+        float multiplier = cos(timeValue);
         shader.set("offset", xValue);
         shader.use();
         glBindVertexArray(VAO);
