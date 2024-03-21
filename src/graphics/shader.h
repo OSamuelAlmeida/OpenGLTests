@@ -12,6 +12,12 @@ public:
     ~Shader();
 
     void use();
+    void set(const std::string &name, bool value) const;
+    void set(const std::string &name, int value) const;
+    void set(const std::string &name, float value) const;
+    void set(const std::string &name, float x, float y) const;
+    void set(const std::string &name, float x, float y, float z) const;
+    void set(const std::string &name, float x, float y, float z, float w) const;
 
 private:
     unsigned int id;
