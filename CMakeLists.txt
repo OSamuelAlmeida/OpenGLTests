@@ -6,6 +6,7 @@ set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 find_package(glfw3 REQUIRED)
+find_package(GLM REQUIRED)
 
 file(GLOB_RECURSE PROJECT_SOURCES src/*.cpp)
 

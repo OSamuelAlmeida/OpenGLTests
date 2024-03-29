@@ -3,6 +3,7 @@
 #include <string>
 
 #include <glad/glad.h>
+#include <glm/glm.hpp>
 
 class Shader
 {
@@ -17,6 +18,7 @@ public:
     void set(const std::string &name, float x, float y) const;
     void set(const std::string &name, float x, float y, float z) const;
     void set(const std::string &name, float x, float y, float z, float w) const;
+    void set(const std::string &name, glm::mat4 matrix) const;
 
 private:
     unsigned int id;

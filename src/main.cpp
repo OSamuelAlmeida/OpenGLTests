@@ -1,6 +1,6 @@
-#include "examples/textures_example.h"
+#include "examples/transform.h"
 
 int main()
 {
-    return textures_example();
+    return transform();
 }
