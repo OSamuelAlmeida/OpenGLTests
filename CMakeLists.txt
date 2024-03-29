@@ -14,7 +14,7 @@ if(NOT EXISTS ${CMAKE_SOURCE_DIR}/vendor/glad)
 endif()
 
 if(NOT EXISTS ${CMAKE_SOURCE_DIR}/vendor/stb)
-    message(FATAL_ERROR "stb not found. Download it from https://glad.dav1d.de/ and extract it to ${CMAKE_SOURCE_DIR}/vendor/glad")
+    message(FATAL_ERROR "stb not found. Copy it from https://github.com/nothings/stb and set it up on ${CMAKE_SOURCE_DIR}/vendor/stb")
 endif()
 
 
